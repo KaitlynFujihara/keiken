@@ -1,0 +1,24 @@
+h1 {
+  text-align: left;
+}
+
+.align {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 40px;
+}
+
+.explorediv {
+  border: 1px solid lightgray;
+  width: 100%;
+  height: 73px;
+  margin-top: 10px;
+  -moz-box-shadow:    0.5px 0.5px 0.5px 0.5px #ccc;
+  -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px #ccc;
+  box-shadow:         0.5px 0.5px 0.5px 0.5px #ccc;
+}
+
+.smallimage {
+  width:100px;
+  height: 72px;
+}

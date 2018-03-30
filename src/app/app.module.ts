@@ -7,12 +7,14 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 
 import {SuiModule} from 'ng2-semantic-ui';
 import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
+import { ExploreComponent } from './explore/explore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    BottomNavbarComponent
+    BottomNavbarComponent,
+    ExploreComponent
   ],
   imports: [
     SuiModule,
