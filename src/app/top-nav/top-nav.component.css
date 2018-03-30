@@ -1,7 +1,30 @@
-#input {
-  float:left !important;
-}
 
 #icon {
   width: 40px;
+}
+
+
+a {
+  text-align:right;
+}
+
+#input {
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  width: 400px;
+  height: 40px;
+  color: black;
+}
+
+input::placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+
+.search {
+  width:25px;
+}
+
+.navbar {
+  background-color: white !important;
 }
