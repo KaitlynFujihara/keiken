@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Airbnb Explore';
+  private apiUrl = 'https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code'
+  data: any={};
 }
