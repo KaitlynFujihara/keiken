@@ -22,3 +22,13 @@ h1 {
   width:100px;
   height: 72px;
 }
+
+#next {
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  width: 40px;
+  height: 40px;
+  Position: absolute;
+  right: 2%;
+  top: 20%;
+}
