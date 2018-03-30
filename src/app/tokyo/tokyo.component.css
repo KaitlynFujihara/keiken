@@ -3,7 +3,14 @@
   margin-right: 70px;
   margin-top: 40px;
 }
-h2, h5 {
+h2 {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold
+  color: #484848;
+}
+
+h5 {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   color: #484848;

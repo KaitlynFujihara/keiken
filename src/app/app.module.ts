@@ -9,6 +9,7 @@ import {SuiModule} from 'ng2-semantic-ui';
 import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 import { ExploreComponent } from './explore/explore.component';
 import { TokyoComponent } from './tokyo/tokyo.component';
+import { VisitComponent } from './visit/visit.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TokyoComponent } from './tokyo/tokyo.component';
     TopNavComponent,
     BottomNavbarComponent,
     ExploreComponent,
-    TokyoComponent
+    TokyoComponent,
+    VisitComponent
   ],
   imports: [
     SuiModule,
