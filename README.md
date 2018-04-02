@@ -1,27 +1,41 @@
-# Keiken
+# Airbnb and Instagram Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+An application that looks like Airbnb, but when you click a specific location or activity it takes you to a page that shows you pictures related to that activity.
 
-## Development server
+### March 30, 2018
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+You can navigate around this Airbnb experiences page, made to look like the Japan experience page. Eventually you can click an activity and it will show you Instagram photos related to that activity.
 
-## Code scaffolding
+## Specifications/User Expectations
+* Navigate site to see photos
+* Can also take in specific location queries
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Setup/Installation Requirements
+* Clone GitHub Repository
+* Open in desktop
+* run npm Install
+* run ng serve to see what it looks like in a browser
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Known Bugs
+This application doesn't work yet.
 
-## Running unit tests
+### Support and Contact Details
+Please email Katie Fujihara (katiefujihara@gmail.com)with any questions, comments, or concerns.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Technologies Used
+Javascript, Webpack, Jasmine, Karma, Better Health API
 
-## Running end-to-end tests
+### License
+*MIT License
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Copyright (c) [2018] [Katie Fujihara]
 
-## Further help
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*
+
+Copyright (c) 2018 Katie Fujihara
