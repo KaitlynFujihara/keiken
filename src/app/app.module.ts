@@ -10,6 +10,7 @@ import { BottomNavbarComponent } from './bottom-navbar/bottom-navbar.component';
 import { ExploreComponent } from './explore/explore.component';
 import { TokyoComponent } from './tokyo/tokyo.component';
 import { VisitComponent } from './visit/visit.component';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VisitComponent } from './visit/visit.component';
     BottomNavbarComponent,
     ExploreComponent,
     TokyoComponent,
-    VisitComponent
+    VisitComponent,
+    SafeHtmlPipe
   ],
   imports: [
     SuiModule,
