@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MapboxService } from '../mapbox.service';
+import { YelpService } from '../yelp.service'
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { FirebaseObjectObservable } from 'angularfire2/database';
@@ -13,7 +14,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class MapComponent implements OnInit {
   inputLocation;
-  constructor(private router: Router, public mapboxService: MapboxService){
+  constructor(private router: Router, public mapboxService: MapboxService, public yelpService: YelpService){
   }
   public ngOnInit(){
     this.mapboxService.mapboxInit('mapbox');
@@ -22,5 +23,8 @@ export class MapComponent implements OnInit {
   public getData(inputLocation:string): void{
     this.mapboxService.searchNearby(inputLocation);
     console.log(inputLocation)
+   }
+   public getYelp(location:{lng: string, lat:string}): void{
+    this.yelpService.searchYelp({lng, lat});
    }
 }

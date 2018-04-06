@@ -2,7 +2,6 @@ import { mapboxConfig } from '../local/mapbox.config';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
-import { MapFormComponent } from './map/map.component'
 
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
@@ -34,7 +33,7 @@ export class MapboxService {
     container: 'mapbox',
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [searchResults.features[0].center[0],searchResults.features[0].center[1]],
-    zoom: 10
+    zoom: 10,
     });
     // console.log(searchResults)
   }
