@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MapboxService } from './mapbox.service';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 
@@ -26,7 +26,11 @@ import { SafeHtmlPipe } from './safe-html.pipe';
     SuiModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    MapboxService
+  ],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule { }

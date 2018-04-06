@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MapboxService } from './mapbox.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Airbnb Explore';
-  private apiUrl = 'https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code'
-  data: any={};
+  public title = 'New';
+  constructor(public mapboxService: MapboxService){
+  }
+  public ngAfterViewInit():void{
+    this.mapboxService.mapboxInit('mapbox');
+    this.mapboxService.searchNearby();
+  }
 }
