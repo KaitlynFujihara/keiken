@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MapboxService } from './mapbox.service';
 import { MapComponent } from './map/map.component';
-import { SidebarComponent } from './sidebar/sidebar.component'
+import { Router } from '@angular/router';
 
 
 @Component({

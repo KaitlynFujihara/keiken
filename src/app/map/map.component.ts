@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.css'],
+  providers : [MapboxService]
 })
 export class MapComponent implements OnInit {
   constructor(private router: Router, public mapboxService: MapboxService){
