@@ -24,10 +24,10 @@ export class MapboxService {
     zoom: 4.7
     });
   }
-  public async searchNearby(){
-    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/Tokyo.json?access_token=${mapboxConfig.accessToken}`);
+  public async searchNearby(inputLocation: string){
+    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputLocation}.json?access_token=${mapboxConfig.accessToken}`);
     const searchResults = await response.json();
-    console.log(searchResults);
+    console.log(searchResults)
   }
   public onMapClick(): Observable<any>{
     return Observable.create(observer=>{

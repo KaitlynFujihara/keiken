@@ -1,18 +1,24 @@
 
 <div id="sidebar">
-  <div class="line">
-    <img src="../assets/google.png" id="google">
-    <br>
+  <img src="../assets/logo.png" id="google">
+  <br>
+  <form class="" action="index.html" method="post">
     <div class="ui search">
       <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="Search location">
+        <input #inputLocation class="prompt" type="text" placeholder="Search location" id="input">
         <i class="search icon"></i>
       </div>
-      <div class="results"></div>
+      <div class="results">
+      </div>
     </div>
-    <br>
-  </div>
+    <button (click)="getLocation(inputLocation.value)" name="button">Submit</button>
+  </form>
+  <br>
   <hr>
+  <div class="container">
+    <h1>Welcome to Yoogle!</h1>
+    <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
+  </div>
 </div>
 <div id="mapbox">
 </div>

@@ -11,10 +11,11 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   providers : [MapboxService]
 })
 export class MapComponent implements OnInit {
+  inputLocation;
   constructor(private router: Router, public mapboxService: MapboxService){
   }
   public ngOnInit(){
     this.mapboxService.mapboxInit('mapbox');
-    this.mapboxService.searchNearby();
+    this.mapboxService.searchNearby(this.inputLocation);
   }
 }

@@ -11,6 +11,14 @@
 }
 
 #google {
-  width: 20%;
-  float: left;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ui.search {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
