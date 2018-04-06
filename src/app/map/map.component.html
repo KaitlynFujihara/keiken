@@ -12,13 +12,16 @@
       <button (click)="getData(inputLocation.value)" class="btn btn-primary">Submit</button>
     </div>
   </form>
-  <div class="results">
-  </div>
   <hr>
   <div class="container">
     <h1>Welcome to Yoogle!</h1>
     <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
+    <div *ngFor="let location of locations" class="results">
+      <h3></h3>
+
+    </div>
   </div>
 </div>
+
 <div id="mapbox">
 </div>

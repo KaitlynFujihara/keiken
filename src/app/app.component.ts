@@ -12,7 +12,7 @@ import { UserService } from './user.service';
   providers: [AuthenticationService, UserService]
 })
 export class AppComponent {
-  title = 'pdxflit';
+  title = 'Yoogle';
   private isLoggedIn: boolean;
   private userName: string;
   private userUID: string;

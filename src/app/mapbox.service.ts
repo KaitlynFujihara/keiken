@@ -29,7 +29,7 @@ export class MapboxService {
     mapboxgl.accessToken = mapboxConfig.accessToken;
     const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputLocation}.json?access_token=${mapboxConfig.accessToken}`);
     const searchResults = await response.json();
-
+    console.log(searchResults)
     this.map = new mapboxgl.Map({
     container: 'mapbox',
     style: 'mapbox://styles/mapbox/streets-v9',
