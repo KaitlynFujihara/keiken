@@ -1,7 +1,7 @@
 import { mapboxConfig } from '../local/mapbox.config';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
-
+import { MapComponent } from './map/map.component'
 
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
@@ -19,9 +19,9 @@ export class MapboxService {
     mapboxgl.accessToken = mapboxConfig.accessToken;
     this.map = new mapboxgl.Map({
     container: elementId,
-    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-    center: [139.839478, 38], // starting position [lng, lat]
-    zoom: 4.7 // starting zoom
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [130.839478, 38],
+    zoom: 4.7
     });
   }
   public async searchNearby(){

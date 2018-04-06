@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { MapboxService } from './mapbox.service';
+import { MapComponent } from './map/map.component';
+import { SidebarComponent } from './sidebar/sidebar.component'
+
 
 @Component({
   selector: 'app-root',
@@ -8,10 +11,4 @@ import { MapboxService } from './mapbox.service';
 })
 export class AppComponent {
   public title = 'New';
-  constructor(public mapboxService: MapboxService){
-  }
-  public ngAfterViewInit():void{
-    this.mapboxService.mapboxInit('mapbox');
-    this.mapboxService.searchNearby();
-  }
 }
