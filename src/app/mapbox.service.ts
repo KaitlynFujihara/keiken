@@ -20,7 +20,7 @@ export class MapboxService {
     this.map = new mapboxgl.Map({
     container: elementId,
     style: 'mapbox://styles/mapbox/streets-v9',
-    center: [130.839478, 38],
+    center: [134, 38],
     zoom: 4.7
     });
   }

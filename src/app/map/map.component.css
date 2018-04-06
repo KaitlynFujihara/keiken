@@ -1,15 +1,16 @@
 #mapbox {
   height: 100%;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  z-index:0;
+  width: 70%;
 }
 
 #sidebar {
   float: left;
-  height: 800px;
-  width:500px;
+  height: 100%;
+  width:30%;
   background-color: white;
-  z-index: 1;
+}
+
+#google {
+  width: 20%;
+  float: left;
 }
