@@ -2,6 +2,7 @@ import { mapboxConfig } from '../local/mapbox.config';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
+import { MapFormComponent } from './map/map-form.component'
 
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
@@ -25,7 +26,7 @@ export class MapboxService {
     });
   }
   public async searchNearby(inputLocation: string){
-    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputLocation}.json?access_token=${mapboxConfig.accessToken}`);
+    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/tokyo.json?access_token=${mapboxConfig.accessToken}`);
     const searchResults = await response.json();
     console.log(searchResults)
   }

@@ -2,17 +2,17 @@
 <div id="sidebar">
   <img src="../assets/logo.png" id="google">
   <br>
-  <form class="" action="index.html" method="post">
+  <form action="index.html" method="post">
     <div class="ui search">
       <div class="ui icon input">
         <input #inputLocation class="prompt" type="text" placeholder="Search location" id="input">
         <i class="search icon"></i>
-      </div>
-      <div class="results">
+        <button (click)="getInputData(inputLocation.value)" name="button">Submit</button>
       </div>
     </div>
-    <button (click)="getLocation(inputLocation.value)" name="button">Submit</button>
-  </form>
+  </form>  
+  <div class="results">
+  </div>
   <br>
   <hr>
   <div class="container">

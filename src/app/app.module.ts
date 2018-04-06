@@ -11,6 +11,7 @@ import { AuthenticationService } from './authentication.service';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MasterFireBase } from '../local/api-keys'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { MapFormComponent } from './map-form/map-form.component';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    MapFormComponent
   ],
   imports: [
     BrowserModule,
