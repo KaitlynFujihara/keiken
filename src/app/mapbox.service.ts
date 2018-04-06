@@ -26,16 +26,16 @@ export class MapboxService {
     });
   }
   public async searchNearby(inputLocation: string){
+    mapboxgl.accessToken = mapboxConfig.accessToken;
     const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputLocation}.json?access_token=${mapboxConfig.accessToken}`);
     const searchResults = await response.json();
-    console.log(searchResults)
 
-    console.log(searchResults[0].center)
-    // this.map = new mapboxgl.Map({
-    // style: 'mapbox://styles/mapbox/streets-v9',
-    // center: [134, 38],
-    // zoom: 4.7
-    // });
+    this.map = new mapboxgl.Map({
+    container: 'mapbox',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [searchResults.features[0].center[0],searchResults.features[0].center[1]],
+    zoom: 10
+    });
     // console.log(searchResults)
   }
   public onMapClick(): Observable<any>{
