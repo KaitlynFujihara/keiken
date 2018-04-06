@@ -1,6 +1,7 @@
 import { yelpKey } from '../local/api-keys'
 import { Injectable } from '@angular/core';
 import { MapComponent } from './map/map.component'
+import { Observable } from 'rxjs/Observable';
 
 
 

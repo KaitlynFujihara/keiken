@@ -25,6 +25,6 @@ export class MapComponent implements OnInit {
     console.log(inputLocation)
    }
    public getYelp(location:{lng: string, lat:string}): void{
-    this.yelpService.searchYelp({lng, lat});
+    this.yelpService.searchYelp(location);
    }
 }

@@ -2,8 +2,6 @@ import { mapboxConfig } from '../local/mapbox.config';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
-
-// var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 
