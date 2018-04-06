@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapboxService } from '../mapbox.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
@@ -16,6 +17,10 @@ export class MapComponent implements OnInit {
   }
   public ngOnInit(){
     this.mapboxService.mapboxInit('mapbox');
-    this.mapboxService.searchNearby(this.inputLocation);
+    // this.mapboxService.searchNearby(this.inputLocation);
   }
+  public getData(inputLocation:string): void{
+    this.mapboxService.searchNearby(inputLocation);
+    console.log(inputLocation)
+   }
 }

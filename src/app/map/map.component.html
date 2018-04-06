@@ -7,10 +7,10 @@
       <div class="ui icon input">
         <input #inputLocation class="prompt" type="text" placeholder="Search location" id="input">
         <i class="search icon"></i>
-        <button (click)="getInputData(inputLocation.value)" name="button">Submit</button>
       </div>
+      <button (click)="getData(inputLocation.value)" class="btn btn-primary">Submit</button>
     </div>
-  </form>  
+  </form>
   <div class="results">
   </div>
   <br>
