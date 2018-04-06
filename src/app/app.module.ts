@@ -6,13 +6,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
+import { AngularFireModule } from 'angularfire2';
+import { AuthenticationService } from './authentication.service';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { MasterFireBase } from '../local/api-keys'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-// export const firebaseConfig = {
-//   apiKey: MasterFireBase.apiKey,
-//   authDomain:  MasterFireBase.authDomain,
-//   databaseURL:  MasterFireBase.databaseURL,
-//   storageBucket:  MasterFireBase.storageBucket
-// };
+
+
+export const firebaseConfig = {
+  apiKey: MasterFireBase.apiKey,
+  authDomain:  MasterFireBase.authDomain,
+  databaseURL:  MasterFireBase.databaseURL,
+  storageBucket:  MasterFireBase.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -24,9 +31,9 @@ import { MapComponent } from './map/map.component';
     routing,
     FormsModule,
     HttpModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // AngularFireDatabaseModule,
-    // AngularFireAuthModule
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [AppComponent]
 })

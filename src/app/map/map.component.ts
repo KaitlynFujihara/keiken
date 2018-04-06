@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapboxService } from '../mapbox.service';
 import { Router } from '@angular/router';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
