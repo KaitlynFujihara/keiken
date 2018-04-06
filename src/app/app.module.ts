@@ -12,8 +12,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MasterFireBase } from '../local/api-keys'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-
-
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
   authDomain:  MasterFireBase.authDomain,

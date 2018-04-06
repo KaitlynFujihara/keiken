@@ -21,15 +21,16 @@ export class AppComponent {
   databaseUser;
 
   constructor(private router: Router, public authService: AuthenticationService, public userService: UserService) {
-    this.authService.user.subscribe(user => {
-      if (user == null) {
-        this.isLoggedIn = false;
-      } else {
-        this.isLoggedIn = true;
-        this.userName = user.displayName;
-        this.userUID = user.uid;
-      }
-    });
+    // this.authService.user.subscribe(user => {
+    //   console.log(user)
+    //   if (user === null) {
+    //     this.isLoggedIn = false;
+    //   } else {
+    //     this.isLoggedIn = true;
+    //     this.userName = user.displayName;
+    //     this.userUID = user.uid;
+    //   }
+    // });
   }
 
   login() {

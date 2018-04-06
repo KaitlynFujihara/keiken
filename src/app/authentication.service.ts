@@ -7,15 +7,27 @@ import { User } from './user.model'
 
 @Injectable()
 export class AuthenticationService {
-  user: Observable<firebase.User>;
+  userIsLoggedIn: boolean = false;
+  userData: any = {};
   authenticatedUsername: string;
 
 
   constructor(
     public afAuth: AngularFireAuth,
     public userService: UserService
-) {
-    this.user = afAuth.authState;
+){}
+  ngOnInit(){
+    this.afAuth.authState.subscribe(user => {
+      console.log("user", user)
+      if (user) {
+        this.userIsLoggedIn = true;
+        this.userData = user;
+      }
+      else {
+        this.userIsLoggedIn = false;
+        this.userData = {};
+      }
+    })
   }
 
   login() {
@@ -38,8 +50,7 @@ export class AuthenticationService {
          });
        }
      });
- }
-
+   }
 
   logout() {
     this.afAuth.auth.signOut();
