@@ -42,7 +42,7 @@ export class MapboxService {
   }
 
   public returnLat(){
-    this.searchNearby()
+    this.searchNearby
     console.log(this.lat)
     return this.lat
   }
