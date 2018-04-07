@@ -7,11 +7,10 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class YelpService {
-  public async searchYelp(location:{lng:string, lat:string}): Promise<any>{
-    console.log(location);
+  public async searchYelp(lng:number, lat:number): Promise<any>{
     const url = `https://fire-storm.glitch.me/yelp-search`
     const request = new Request(url,{
-    headers: {"longitude": location.lng.toString(), "latitude":location.lat.toString()}
+    headers: {"longitude": lng, "latitude":lat}
   });
     const response: Response = await fetch(request);
     if (response){

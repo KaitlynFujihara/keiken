@@ -11,6 +11,7 @@ import { AuthenticationService } from './authentication.service';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MasterFireBase } from '../local/api-keys'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { MapYelpComponent } from './map-yelp/map-yelp.component';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -23,6 +24,7 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     MapComponent,
+    MapYelpComponent,
 
   ],
   imports: [

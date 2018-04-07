@@ -3,11 +3,16 @@ import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
 import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+import { YelpService } from './yelp.service'
+
 
 
 @Injectable()
 export class MapboxService {
+  searchResults: any;
   public map;
+  public lat;
+  public lng;
   constructor(){}
 
   public ngOnInit():void {
@@ -26,15 +31,27 @@ export class MapboxService {
     mapboxgl.accessToken = mapboxConfig.accessToken;
     const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${inputLocation}.json?access_token=${mapboxConfig.accessToken}`);
     const searchResults = await response.json();
-    console.log(searchResults)
+    this.lat= searchResults.features[0].center[0];
+    this.lng= searchResults.features[0].center[1];
     this.map = new mapboxgl.Map({
     container: 'mapbox',
     style: 'mapbox://styles/mapbox/streets-v9',
-    center: [searchResults.features[0].center[0],searchResults.features[0].center[1]],
+    center: [this.lat, this.lng],
     zoom: 10,
     });
-    // console.log(searchResults)
   }
+
+  public returnLat(){
+    this.searchNearby()
+    console.log(this.lat)
+    return this.lat
+  }
+
+  public returnLng(){
+    console.log(this.lng)
+    return this.lng
+  }
+
   public onMapClick(): Observable<any>{
     return Observable.create(observer=>{
       this.map.on('click', function(event) {
