@@ -13,8 +13,10 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   providers : [MapboxService, YelpService]
 })
 export class MapComponent implements OnInit {
-
   inputLocation;
+  public lat;
+  public lng;
+
   constructor(private router: Router, public mapboxService: MapboxService, public yelpService: YelpService){
   }
   public ngOnInit(){
@@ -24,7 +26,8 @@ export class MapComponent implements OnInit {
   public getData(inputLocation:string): void{
     this.mapboxService.searchNearby(inputLocation);
    }
-  public getMapPosition() {
-    console.log(this.yelpService.searchYelp(this.searchNearby(this.inputLocation).lat, this.searchNearby(this.inputLocation).lng)
+  public getMapPosition(name: string, imageUrl: string, review: string) {
+    const businesses= this.yelpService.searchYelp(this.mapboxService.lat, this.mapboxService.lng);
+
   }
 }

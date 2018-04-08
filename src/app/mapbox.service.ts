@@ -41,17 +41,6 @@ export class MapboxService {
     });
   }
 
-  public returnLat(){
-    this.searchNearby
-    console.log(this.lat)
-    return this.lat
-  }
-
-  public returnLng(){
-    console.log(this.lng)
-    return this.lng
-  }
-
   public onMapClick(): Observable<any>{
     return Observable.create(observer=>{
       this.map.on('click', function(event) {

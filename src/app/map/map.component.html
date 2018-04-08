@@ -16,9 +16,8 @@
   <div class="container">
     <h1>Welcome to Yoogle!</h1>
     <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
-    <div *ngFor="let location of locations" class="results">
-      <h3></h3>
-
+    <div *ngFor="let business of businesses" class="results">
+      <h3>{{( business | async)?.id}}</h3>
     </div>
   </div>
 </div>
