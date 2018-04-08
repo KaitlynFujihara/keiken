@@ -28,6 +28,6 @@ export class MapComponent implements OnInit {
    }
   public getMapPosition(name: string, imageUrl: string, review: string) {
     const businesses= this.yelpService.searchYelp(this.mapboxService.lat, this.mapboxService.lng);
-
+    console.log(businesses)
   }
 }
