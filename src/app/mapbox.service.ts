@@ -2,7 +2,7 @@
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
-import  mapboxgl = require ('mapbox-gl/dist/mapbox-gl.js');
+import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl';
 import { YelpService } from './yelp.service'
 
 
@@ -19,7 +19,7 @@ export class MapboxService {
 
   }
   public mapboxInit(elementId:string):void {
-    mapboxgl.accessToken = "pk.eyJ1Ijoia2F0aWVmdWppaGFyYSIsImEiOiJjamZsdnM1cDQwbXBsMnFxbzcwNzdscGE2In0.TX5_xN0gckWco-bvSENNeg"
+    mapboxgl.accessToken= mapboxConfig.accessToken;
     this.map = new mapboxgl.Map({
     container: elementId,
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -50,8 +50,3 @@ export class MapboxService {
      });
    }
   }
-// mapboxgl.accessToken = mapboxConfig.accessToken
-// var map = new mapboxgl.Map({
-// container: 'YOUR_CONTAINER_ELEMENT_ID',
-// style: 'mapbox://styles/mapbox/streets-v10'
-// });
