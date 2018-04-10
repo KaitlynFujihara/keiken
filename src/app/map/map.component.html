@@ -19,7 +19,7 @@
       <div id="underbar">
         <button (click)="showFavorites()" name="button" class="btn btn-default star">Favorites</button>
         <div *ngFor="let favorite of listFavorites" id="favorites">
-          <h4>{{favorite.name}}</h4>
+          <h6>{{favorite.name}}</h6>
         </div>
       <div *ngFor="let business of businesses" id="business">
         <div class="business">
@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-</div>  
+</div>
 
 
 <div id="mapbox">

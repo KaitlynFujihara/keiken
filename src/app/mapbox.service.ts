@@ -1,8 +1,8 @@
-import { mapboxConfig } from '../local/mapbox.config';
+ import { mapboxConfig } from '../local/mapbox.config';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core'
 import { MapComponent } from './map/map.component'
-import mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+import  mapboxgl = require ('mapbox-gl/dist/mapbox-gl.js');
 import { YelpService } from './yelp.service'
 
 
@@ -19,7 +19,7 @@ export class MapboxService {
 
   }
   public mapboxInit(elementId:string):void {
-    mapboxgl.accessToken = mapboxConfig.accessToken;
+    mapboxgl.accessToken = "pk.eyJ1Ijoia2F0aWVmdWppaGFyYSIsImEiOiJjamZsdnM1cDQwbXBsMnFxbzcwNzdscGE2In0.TX5_xN0gckWco-bvSENNeg"
     this.map = new mapboxgl.Map({
     container: elementId,
     style: 'mapbox://styles/mapbox/streets-v9',

@@ -1,31 +1,37 @@
-# Airbnb and Instagram Clone
+# Yoogle (Yelp/Google)
 
-An application that looks like Airbnb, but when you click a specific location or activity it takes you to a page that shows you pictures related to that activity.
+An application that allows you to search a location, and the resulting Yelp recommendations appear.
 
-### March 30, 2018
+### April 10, 2018
 
 ## Description
-You can navigate around this Airbnb experiences page, made to look like the Japan experience page. Eventually you can click an activity and it will show you Instagram photos related to that activity.
+In the input box, you query a location. You click "submit" and it shows you where that location is on a map using the Mapbox API. The next step is to click Yoogle, then it shows the resulting Yelp recommendations for that location you queried. If you want to "favorite" a location, you would click the star button under the location and this saves to Firebase. If you click "favorites" it shows you the items that you favorited.
 
 ## Specifications/User Expectations
-* Navigate site to see photos
-* Can also take in specific location queries
+* Allows you to see on a map where your search is (using latitude and longitude)
+* Allows you to see recommendations for the location that you queried
+* Allows you to "favorite" locations so that you can refer back to them later
 
 
 ### Setup/Installation Requirements
 * Clone GitHub Repository
 * Open in desktop
 * run npm Install
-* run ng serve to see what it looks like in a browser
+* make a folder called "local" in your src folder
+* make a file called api-keys.ts in the "local" folder
+* export yelpKey and MasterFirebase api keys
+* make a file called mapbox.config.ts in the "local" folder
+* export mapboxConfig access token
+* run ng serve --open to see what it looks like in a browser
 
 ### Known Bugs
-This application doesn't work yet.
+Having trouble deploying it.
 
 ### Support and Contact Details
 Please email Katie Fujihara (katiefujihara@gmail.com)with any questions, comments, or concerns.
 
 ### Technologies Used
-Javascript, Webpack, Jasmine, Karma, Better Health API
+Angular, Typescript, Firebase
 
 ### License
 *MIT License
