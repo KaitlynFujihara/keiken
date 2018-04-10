@@ -1,3 +1,9 @@
+h1, h2, h3, h4 {
+  text-align: center;
+}
+h4 {
+  color: #58A55C;
+}
 #mapbox {
   height: 100%;
   width: 70%;
@@ -8,12 +14,35 @@
   height: 100%;
   width:30%;
   background-color: white;
+  overflow: hidden;
 }
 
+.star {
+  background-color:#F2BD42;
+  color: white;
+}
+
+#yoogle {
+  overflow: hidden;
+  width: 100%;
+}
 #google {
   width: 100px;
   display: block;
   margin: 0 auto;
+}
+
+#image {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%
+}
+
+#scroll {
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .ui.search {
@@ -21,4 +50,10 @@
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+.business {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }

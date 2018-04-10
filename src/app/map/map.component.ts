@@ -3,6 +3,7 @@ import { MapboxService } from '../mapbox.service';
 import { YelpService } from '../yelp.service'
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import { Favorite } from '../models/favorite.model';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
@@ -16,6 +17,7 @@ export class MapComponent implements OnInit {
   inputLocation;
   public lat;
   public lng;
+  public businesses;
 
   constructor(private router: Router, public mapboxService: MapboxService, public yelpService: YelpService){
   }
@@ -26,8 +28,14 @@ export class MapComponent implements OnInit {
   public getData(inputLocation:string): void{
     this.mapboxService.searchNearby(inputLocation);
    }
-  public getMapPosition(name: string, imageUrl: string, review: string) {
-    const businesses= this.yelpService.searchYelp(this.mapboxService.lat, this.mapboxService.lng);
-    console.log(businesses)
+  public getMapPosition() {
+    this.yelpService.searchYelp(this.mapboxService.lat, this.mapboxService.lng).then((data) => {
+      this.businesses = data.businesses;
+    });
+  }
+
+  public favorite(name: string, image_url: string, rating: string, price: string) {
+    var newFavorite: Favorite = new Favorite(name, image_url, rating, price);
+    console.log(newFavorite);
   }
 }

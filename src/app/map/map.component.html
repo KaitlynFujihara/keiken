@@ -9,15 +9,23 @@
         <i class="search icon"></i>
       </div>
       <br><br>
-      <button (click)="getData(inputLocation.value)" (click)="getMapPosition()" class="btn btn-primary">Submit</button>
+      <button (click)="getData(inputLocation.value)" class="btn btn-primary">Submit</button>
+      <button (click)="getMapPosition()" class="btn btn-danger">Yoogle!</button>
     </div>
   </form>
   <hr>
-  <div class="container">
+  <div class="container" id="scroll">
     <h1>Welcome to Yoogle!</h1>
     <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
-    <div *ngFor="let business of businesses" class="results">
-      <h3>{{( business | async)?.id}}</h3>
+    <div *ngFor="let business of businesses" class="row">
+      <div class="business">
+        <h4 #newName>{{business.name}}</h4>
+        <h5 #newRating>Rating: {{business.rating}}</h5>
+        <h5 #newPrice>Price: {{business.price}}</h5>
+        <button (click)="favorite(newName.value, newRating.value, newPrice.value, newImage.value)" class="btn btn-default star"><h4 class="star">★</h4></button><br><br>
+        <img #newImage src="{{business.image_url}}" id="image">
+        <br>
+      </div>
     </div>
   </div>
 </div>
