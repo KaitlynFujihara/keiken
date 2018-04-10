@@ -19,11 +19,11 @@
     <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
     <div *ngFor="let business of businesses" class="row">
       <div class="business">
-        <h4 #newName>{{business.name}}</h4>
-        <h5 #newRating>Rating: {{business.rating}}</h5>
-        <h5 #newPrice>Price: {{business.price}}</h5>
+        <h4>{{business.name}}</h4>
+        <h5>Rating: {{business.rating}}</h5>
+        <h5>Price: {{business.price}}</h5>
         <button (click)="favorite(newName.value, newRating.value, newPrice.value, newImage.value)" class="btn btn-default star"><h4 class="star">★</h4></button><br><br>
-        <img #newImage src="{{business.image_url}}" id="image">
+        <img src="{{business.image_url}}" id="image">
         <br>
       </div>
     </div>
