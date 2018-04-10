@@ -17,6 +17,7 @@ import { AsyncPipe } from '@angular/common';
   providers : [MapboxService, YelpService, DatabaseService]
 })
 export class MapComponent implements OnInit {
+  listFavorites: any[];
   public favorites: FirebaseListObservable<any[]>;
   inputLocation;
   public lat;
@@ -47,10 +48,10 @@ export class MapComponent implements OnInit {
     alert("You added " + name+ " to your favorites!")
     }
 
-  // public showFavorites(){
-  //  // this.databaseService.getFavorites().subscribe(data => {
-  //  //    this.favorites = data;
-  //  //  })
-  //  //  console.log(this.favorites)
-  //   }
+  public showFavorites(){
+   this.databaseService.getFavorites().subscribe(data => {
+      this.listFavorites = data;
+    })
+    console.log(this.listFavorites)
+    }
   }

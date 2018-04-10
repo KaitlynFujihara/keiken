@@ -18,5 +18,5 @@ export class DatabaseService {
 
    getFavorites(){
   return this.favorites;
-}
+  }
 }
