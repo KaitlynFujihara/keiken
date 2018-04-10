@@ -1,4 +1,3 @@
-
 <div id="sidebar">
   <img src="../assets/logo.png" id="google">
   <br>
@@ -17,18 +16,30 @@
   <div class="container" id="scroll">
     <h1>Welcome to Yoogle!</h1>
     <h3>Your one stop shop for finding popular destinations in the location of your choice!</h3>
-    <div *ngFor="let business of businesses" class="row">
+    <button (click)="showFavorites()" class="btn btn-default star">Favorites</button>
+    <div *ngFor="let favorite of favorites" id="favorites">
+      <h4>{{favorite.name}}</h4>
+    </div>
+    <div *ngFor="let business of businesses" id="business">
       <div class="business">
-        <h4>{{business.name}}</h4>
-        <h5>Rating: {{business.rating}}</h5>
-        <h5>Price: {{business.price}}</h5>
-        <button (click)="favorite(newName.value, newRating.value, newPrice.value, newImage.value)" class="btn btn-default star"><h4 class="star">★</h4></button><br><br>
+        <form class="firebase">
+          <h4><input #name readonly="readonly" placeholder="{{business.name}}" id="read" value="{{business.name}}"></h4>
+          <h4>Rating:</h4>
+          <h4><input #rating readonly="readonly" placeholder="{{business.rating}}" value="{{business.rating}}" id="read"></h4>
+          <h4>Price:</h4>
+          <h4><input #price readonly="readonly" placeholder="{{business.price}}"id="read" value="{{business.price}}"></h4>
+          <button (click)="favorite(name.value, rating.value, price.value)" class="btn btn-default star"><h4 class="star">★</h4></button><br><br>
+        </form>
         <img src="{{business.image_url}}" id="image">
         <br>
       </div>
     </div>
   </div>
+  <div id="underbar">
+    <h1>Favorites</h1>
+  </div>
 </div>
+
 
 <div id="mapbox">
 </div>

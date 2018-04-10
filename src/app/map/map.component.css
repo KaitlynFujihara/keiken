@@ -17,9 +17,16 @@ h4 {
   overflow: hidden;
 }
 
+#underbar {
+height: 50%;
+}
+
 .star {
   background-color:#F2BD42;
   color: white;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 #yoogle {
@@ -43,6 +50,12 @@ h4 {
 #scroll {
   overflow-y: scroll;
   height: 100%;
+}
+
+#read {
+  border: none;
+  text-align: center;
+  color: black;
 }
 
 .ui.search {
